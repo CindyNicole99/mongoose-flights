@@ -1,10 +1,10 @@
-console.log(process.env)
 import "dotenv/config.js"
 import createError from 'http-errors'
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import logger from 'morgan'
+import('./config/database.js')
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
@@ -53,3 +53,4 @@ app.use(function (err, req, res, next) {
 export {
   app
 }
+
