@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const flightSchema = new Schema({
+const flightSchema = new Schema ({
     airline: {
         type: String,
         enum: ["American", "Southwest", "United"]
@@ -23,8 +23,7 @@ const flightSchema = new Schema({
             return defaultDate
         }
     },
-    tickets: [ticketSchema],
-    timestamps: true,
+    // timestamps: true,
 })
 
 const Flight = mongoose.model("Flight", flightSchema)
